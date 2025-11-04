@@ -479,9 +479,6 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
 
     .blog-card {
         padding: 1rem;
@@ -490,4 +487,69 @@ a:hover {
     .blog-single {
         padding: 1.5rem;
     }
+
+    .footer {
+  background-color: #f8f9fa; /* light gray */
+  color: #333;
+  padding: 40px 0 20px;
+  border-top: 1px solid #e0e0e0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  width: 45%;
+  min-width: 280px;
+}
+
+.footer-left h4,
+.footer-right h4 {
+  color: #4a4aff;
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  line-height: 1.6;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-right ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-right ul li::before {
+  margin-right: 8px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Optional: small hover animation for the icons/text */
+.footer-right ul li:hover {
+  transform: translateX(4px);
+  transition: 0.3s ease;
+}
+
 }

@@ -107,7 +107,26 @@ closeDBConnection($conn);
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h4>About BlogApp</h4>
+                <p>BlogApp is a platform to share your ideas, stories, and experiences with the world.
+        Write freely and connect with other passionate writers. </p>
+                </div>
+
+                <div class="footer-right">
+                    <h4>ConnectWith Us</h4>
+                    <ul>
+                        <li> blogapp.facebook.com</li>
+                        <li> blogapp.intagram.com</li>
+                        <li> blogapp-dev.github</li>
+                        <li> Location: Moratuwa, Sri Lanka</li>
+                        <li> blogapp@gmail.com</li>
+                </ul>
+                </div>
+                </div>
+
+        <div class="footer-bottom">
             <p>&copy; 2025 BlogApp. All rights reserved.</p>
         </div>
     </footer>
