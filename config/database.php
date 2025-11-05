@@ -5,10 +5,10 @@
  */
 
 // Database credentials
-define('DB_HOST', 'localhost');     // Database host (usually localhost)
-define('DB_USER', 'root');          // Database username (default is root for XAMPP/WAMP)
-define('DB_PASS', '');              // Database password (empty for local development)
-define('DB_NAME', 'blog-app');      // Database name
+define('DB_HOST', 'sql309.infinityfree.com');     // Database host (usually localhost)
+define('DB_USER', 'if0_40339420');          // Database username (default is root for XAMPP/WAMP)
+define('DB_PASS', 'GRAAD9dVu3D');              // Database password (empty for local development)
+define('DB_NAME', 'if0_40339420_wordnest');      // Database name
 
 /**
  * Get Database Connection
