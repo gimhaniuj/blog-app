@@ -17,7 +17,7 @@
     --success-color: #10b981;
     --warning-color: #f59e0b;
     --danger-color: #ef4444;
-    --light-bg: #f9fafb;
+    --light-bg: #E0F2FE;
     --white: #ffffff;
     --text-dark: #111827;
     --text-light: #6b7280;
@@ -50,7 +50,7 @@ a:hover {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 /* ============ Navigation ============ */
@@ -238,7 +238,7 @@ a:hover {
 }
 
 .blog-card-header h2 a {
-    color: var(--text-dark);
+    color: #22BCD7;
 }
 
 .blog-card-body p {
@@ -262,6 +262,19 @@ a:hover {
     font-size: 0.85rem;
     color: var(--text-light);
 }
+
+.blog-author::before {
+    content: '👤';
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
+.blog-date::before {
+    content: '📅';
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
 
 .blog-actions {
     display: flex;
@@ -346,11 +359,17 @@ a:hover {
     box-shadow: var(--shadow-lg);
 }
 
+
 .auth-form-container h1,
 .editor-container h1 {
     text-align: center;
     margin-bottom: 0.5rem;
     color: var(--text-dark);
+}
+
+
+.editor-container h1{
+    color:#4338ca;
 }
 
 .subtitle {
@@ -412,10 +431,10 @@ a:hover {
 
 /* ============ Footer ============ */
 .footer {
-    background-color: var(--white);
+    background-color: #242f44;
     padding: 1.5rem 0;
     text-align: center;
-    color: var(--text-light);
+    color: white;
     margin-top: auto;
     box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -488,40 +507,38 @@ a:hover {
         padding: 1.5rem;
     }
 
-    .footer {
-  background-color: #f8f9fa; /* light gray */
+ .footer {
+  background-color: #f8f9fa;
   color: #333;
   padding: 40px 0 20px;
   border-top: 1px solid #e0e0e0;
   font-family: 'Poppins', sans-serif;
 }
 
+
 .footer-container {
-  display: flex;
-  justify-content: space-between;
+  display: flex;                  /* creates side-by-side columns */
+  justify-content: space-between; /* adds space */
   align-items: flex-start;
   max-width: 1000px;
   margin: auto;
   padding: 0 20px;
-  flex-wrap: wrap;
+  flex-wrap: wrap;                /* allows columns to stack on small screens */
 }
 
-.footer-left,
+/* right column widths */
 .footer-right {
   width: 45%;
   min-width: 280px;
 }
 
-.footer-left h4,
+/* Headings */
 .footer-right h4 {
   color: #4a4aff;
   margin-bottom: 10px;
 }
 
-.footer-left p {
-  line-height: 1.6;
-}
-
+/* Right column content list */
 .footer-right ul {
   list-style: none;
   padding: 0;
@@ -535,10 +552,6 @@ a:hover {
   align-items: center;
 }
 
-.footer-right ul li::before {
-  margin-right: 8px;
-}
-
 .footer-bottom {
   text-align: center;
   margin-top: 30px;
@@ -546,10 +559,40 @@ a:hover {
   color: #777;
 }
 
-/* Optional: small hover animation for the icons/text */
-.footer-right ul li:hover {
-  transform: translateX(4px);
-  transition: 0.3s ease;
+
 }
 
+.blog-grid h2{
+    color:#10b981
+}
+
+/* ============ Logo with Image ============ */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Space between image and text */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-image {
+    width: 40px;  /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    object-fit: contain; /* Maintains aspect ratio */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-image {
+    transform: rotate(5deg); /* Fun hover effect */
+}
+
+.logo-text {
+    color: var(--primary-color);
+    font-weight: bold;
 }

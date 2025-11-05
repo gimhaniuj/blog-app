@@ -32,19 +32,23 @@ closeDBConnection($conn);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog App - Home</title>
+    <title>Word Nest - Home</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="index.php" class="logo">BlogApp</a>
+            <a href="index.php" class="logo">
+    <img src="assets/images/logo_png.png" alt="Word Nest Logo" class="logo-image">
+    <span class="logo-text">Word Nest</span>
+</a>
             <ul class="nav-menu">
-                <li><a href="index.php">Home</a></li>
+                
                 <?php if (isLoggedIn()): ?>
-                    <li><a href="create-blog.php" class="btn btn-primary btn-sm">Create Blog</a></li>
                     <li><span class="nav-user">Hello, <?php echo e(getUsername()); ?></span></li>
+                    <li><a href="create-blog.php" class="btn btn-primary btn-sm">Create Blog</a></li>
+                    
                     <li><a href="logout.php" class="btn btn-secondary btn-sm">Logout</a></li>
                 <?php else: ?>
                     <li><a href="login.php" class="btn btn-secondary btn-sm">Login</a></li>
@@ -57,7 +61,7 @@ closeDBConnection($conn);
     <!-- Main Content -->
     <div class="container main-content">
         <div class="page-header">
-            <h1>Latest Blog Posts</h1>
+            <h1>Latest Articles</h1>
             <?php if (isLoggedIn()): ?>
                 <a href="create-blog.php" class="btn btn-primary">
                     <span>+</span> New Post
@@ -84,7 +88,7 @@ closeDBConnection($conn);
         <?php else: ?>
             <div class="blog-grid">
                 <?php foreach ($blogs as $blog): ?>
-                    <article class="blog-card">
+                    <div><article class="blog-card">
                         <div class="blog-card-header">
                             <h2>
                                 <a href="view-blog.php?id=<?php echo $blog['id']; ?>">
@@ -120,6 +124,7 @@ closeDBConnection($conn);
                                 <?php endif; ?>
                             </div>
                         </div>
+                                </div>
                     </article>
                 <?php endforeach; ?>
             </div>
@@ -127,11 +132,22 @@ closeDBConnection($conn);
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 BlogApp. All rights reserved.</p>
-        </div>
-    </footer>
+   <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-right">
+      <h4>Connect With Us</h4>
+      <ul>
+        <li> GitHub: wordnest-dev</li>
+        <li> Email: wordnest@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy 2025 WordNest. All rights reserved.</p>
+  </div>
+</footer>
 
     <script src="assets/js/main.js"></script>
 </body>

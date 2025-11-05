@@ -40,14 +40,17 @@ closeDBConnection($conn);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo e($blog['title']); ?> - Blog App</title>
+    <title><?php echo e($blog['title']); ?> - Word Nest</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="index.php" class="logo">BlogApp</a>
+            <a href="index.php" class="logo">
+    <img src="assets/images/logo_png.png" alt="Word Nest Logo" class="logo-image">
+    <span class="logo-text">Word Nest</span>
+</a>
             <ul class="nav-menu">
                 <li><a href="index.php">Home</a></li>
                 <?php if (isLoggedIn()): ?>
@@ -106,30 +109,22 @@ closeDBConnection($conn);
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-left">
-                <h4>About BlogApp</h4>
-                <p>BlogApp is a platform to share your ideas, stories, and experiences with the world.
-        Write freely and connect with other passionate writers. </p>
-                </div>
+   <footer class="footer">
+  <div class="footer-container">
 
-                <div class="footer-right">
-                    <h4>ConnectWith Us</h4>
-                    <ul>
-                        <li> blogapp.facebook.com</li>
-                        <li> blogapp.intagram.com</li>
-                        <li> blogapp-dev.github</li>
-                        <li> Location: Moratuwa, Sri Lanka</li>
-                        <li> blogapp@gmail.com</li>
-                </ul>
-                </div>
-                </div>
+    <div class="footer-right">
+      <h4>Connect With Us</h4>
+      <ul>
+        <li> GitHub: wordnest-dev</li>
+        <li> Email: wordnest@gmail.com</li>
+      </ul>
+    </div>
+  </div>
 
-        <div class="footer-bottom">
-            <p>&copy; 2025 BlogApp. All rights reserved.</p>
-        </div>
-    </footer>
+  <div class="footer-bottom">
+    <p>&copy 2025 WordNest. All rights reserved.</p>
+  </div>
+</footer>
 
     <script src="assets/js/main.js"></script>
 </body>

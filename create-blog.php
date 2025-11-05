@@ -56,18 +56,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Blog - Blog App</title>
+    <title>Create Blog - Word Nest</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="index.php" class="logo">BlogApp</a>
+            <a href="index.php" class="logo">
+    <img src="assets/images/logo_png.png" alt="Word Nest Logo" class="logo-image">
+    <span class="logo-text">Word Nest</span>
+</a>
             <ul class="nav-menu">
+                <li><span class="nav-user">Hello, <?php echo e(getUsername()); ?></span></li>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="create-blog.php" class="active">Create Blog</a></li>
-                <li><span class="nav-user">Hello, <?php echo e(getUsername()); ?></span></li>
                 <li><a href="logout.php" class="btn btn-secondary btn-sm">Logout</a></li>
             </ul>
         </div>
@@ -76,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- Main Content -->
     <div class="container main-content">
         <div class="editor-container">
-            <h1>Create New Blog Post</h1>
+            <h1>Write Something New</h1>
             
             <?php if (!empty($errors)): ?>
                 <div class="alert alert-error">
@@ -96,14 +99,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         id="title" 
                         name="title" 
                         value="<?php echo e($_POST['title'] ?? ''); ?>"
-                        placeholder="Enter an engaging title..."
+                        placeholder="Enter title here"
                         required
-                        maxlength="255">
-                    <small id="titleCount">0 / 255 characters</small>
+                        maxlength="200">
+                    <small id="titleCount">0 / 200 characters</small>
                 </div>
                 
                 <div class="form-group">
-                    <label for="content">Blog Content</label>
+                    <label for="content">Content</label>
                     <textarea 
                         id="content" 
                         name="content" 
@@ -124,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 BlogApp. All rights reserved.</p>
+            <p>&copy; 2025 WordNest. All rights reserved.</p>
         </div>
     </footer>
 
