@@ -1,0 +1,24 @@
+# Ignore environment config
+.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and cache
+*.log
+cache/
+
+# Ignore IDE/editor settings
+.vscode/
+.idea/
+
+# Ignore OS-specific files
+__MACOSX/
+
+# Ignore uploads or temporary folders (optional)
+uploads/
+temp/
+
+# Ignore node_modules (if you ever use Node.js tools)
+node_modules/
